@@ -1,0 +1,57 @@
+1 table -> classe
+  * TBox:
+      <tid> rdf:type owl:Class .
+  * ABox:
+      <rid> rdf:type <tid> .
+
+2 column -> data property
+  * TBox:
+      <cid> rdf:type owl:DataProperty .
+      <cid> rdf:type owl:FunctionalProperty .
+      <cid> rdfs:domain <tid> .
+      <cid> rdfs:range <datatype> .
+    * if column is NOT NULL
+      <tid> rdfs:subClassOf [
+          rdf:type owl:Restriction ;
+          owl:onProperty <cid> ;
+          owl:someValueFrom <datatype> .
+      ] .
+    * if column is UNIQUE
+      <cid> rdf:type InverseFunctionalProperty .
+  * ABox:
+      <rid> <cid> <cval> .
+
+3a fk!=pk -> object property
+  * TBox:
+      <kid> rdf:type owl:ObjectProperty .
+      <kid> rdf:type owl:FunctionalProperty .
+      <kid> rdfs:domain <tid> .
+      <kid> rdfs:range <tid> .
+    * if key is NOT NULL
+      <tid> rdfs:subClassOf [
+          rdf:type owl:Restriction ;
+          owl:onProperty <kid> ;
+          owl:someValueFrom <tid> .
+      ] .
+    * if key is UNIQUE
+      <kid> rdf:type InverseFunctionalProperty .
+  * ABox:
+      <rid> <kid> <rid> .
+
+3b fk=pk -> inheritence
+  * TBox:
+      <tid> rdfs:subClassOf <tid> .
+  * ABox:
+      <rid> owl:sameAs <rid> .
+
+4 2xfk -> object property
+  * TBox:
+      <pid> rdf:type owl:ObjectProperty .
+      <pid> rdfs:domain <tid> .
+      <pid> rdfs:range <tid> .
+    * if key1 is UNIQUE
+      <pid> rdf:type owl:FunctionalProperty .
+    * if key2 is UNIQUE
+      <pid> rdf:type owl:InverseFunctionalProperty .
+  * ABox:
+    * <rid> <pid> <rid> .

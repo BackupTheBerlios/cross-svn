@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path=""/>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry exported="true" kind="lib" path="/usr/share/java/postgresql.jar"/>
+	<classpathentry exported="true" sourcepath="/usr/local/Jena-2.1/src" kind="lib" path="/usr/local/Jena-2.1/lib/jena.jar"/>
+	<classpathentry exported="true" kind="lib" path="/usr/local/Jena-2.1/lib/commons-logging.jar"/>
+	<classpathentry exported="true" kind="lib" path="/usr/local/Jena-2.1/lib/antlr.jar"/>
+	<classpathentry exported="true" kind="lib" path="/usr/local/Jena-2.1/lib/concurrent.jar"/>
+	<classpathentry exported="true" kind="lib" path="/usr/local/Jena-2.1/lib/icu4j.jar"/>
+	<classpathentry exported="true" kind="lib" path="/usr/local/Jena-2.1/lib/jakarta-oro-2.0.5.jar"/>
+	<classpathentry exported="true" kind="lib" path="/usr/local/Jena-2.1/lib/junit.jar"/>
+	<classpathentry exported="true" kind="lib" path="/usr/local/Jena-2.1/lib/log4j-1.2.7.jar"/>
+	<classpathentry exported="true" kind="lib" path="/usr/local/Jena-2.1/lib/rdf-api-2001-01-19.jar"/>
+	<classpathentry exported="true" kind="lib" path="/usr/local/Jena-2.1/lib/xercesImpl.jar"/>
+	<classpathentry exported="true" kind="lib" path="/usr/local/Jena-2.1/lib/xml-apis.jar"/>
+	<classpathentry kind="lib" path="/usr/share/java/mysql.jar"/>
+	<classpathentry kind="output" path=""/>
+</classpath>
